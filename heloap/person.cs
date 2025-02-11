@@ -1,15 +1,20 @@
 ﻿namespace heloap
 {
-    public class Person
+    class Person
     {
-        public string Name { get; set; } = "";
-        public int Age { get; set; }
-        public List<string> Languages { get; set; } = new();
-        public Company? Company { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public Role Role { get; set; }
+        public Person(string email, string password, Role role)
+        {
+            Email = email;
+            Password = password;
+            Role = role;
+        }
     }
-    public class Company
+    class Role
     {
-        public string Title { get; set; } = "";
-        public string Country { get; set; } = "";
+        public string Name { get; set; }
+        public Role(string name) => Name = name;
     }
 }
